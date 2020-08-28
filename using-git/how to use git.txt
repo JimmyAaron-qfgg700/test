@@ -1,0 +1,36 @@
+首先要安装git,这里就不多说了，默认大家都已安装完毕。
+
+设置姓名和邮箱地址
+
+git config --global user.name "Firstname Lastname"
+git comnfig --global user.email "your_email@example.com"
+配置公私密钥。
+
+ssh -keygen -t rsa -C "your_email@example.com"
+三次回车
+
+添加公开密钥
+
+id_rsa 文件是私有密钥，id_rsa.pub 是公开密钥
+打开GitHub进入 settings 选择 SSH and GPG keys 点击Add SSH Key,title 中输入密钥名称，key 中输入 id_rsa.pub 文件里的内容。
+通过命令cat ~/.ssh/id_rsa.pub打印密钥内容，然后把密钥内容贴入 key 中。
+成功之后，创建用户的邮箱将会收到一封提示“密钥添加完成的邮件”
+完成以上内容后，就可以用手中私人密钥与GitHub进行认证和通信。
+
+$ ssh -T git@github.com
+The authenticity of host 'github.com (192.*.*.*)' can't be established.
+RSA key fingerprint is SHA256:nThbg*****6kXU***pJWGl7E1IG*****.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,192.*.*.*' (RSA) to the list of known hosts.
+Enter passphrase for key '/c/Users/用户名/.ssh/id_rsa':
+Enter passphrase for key '/c/Users/用户名/.ssh/id_rsa':
+Hi user! You've successfully authenticated, but GitHub does not provide shell access.
+
+初始化仓库
+git init
+
+添加远程仓库
+git remote add origin git@github.com:用户名/远程仓库名.git
+
+从远程仓库下载到本地仓库
+git clone git@github.com:用户名/远程仓库名.git

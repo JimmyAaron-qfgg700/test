@@ -1,0 +1,7 @@
+1.git init
+2.git status
+3.git add .(.代表全部，或改为文件名)
+4.git commit -m ""(-m后面添加的是对本次操作的说明)
+5.git status(查看是否commit)
+6.git remote add origin git@github.com:XXX/XXX.git
+7.git push -u origin master（新仓库需加-u）
