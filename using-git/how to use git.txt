@@ -6,7 +6,7 @@ git config --global user.name "Firstname Lastname"
 git comnfig --global user.email "your_email@example.com"
 配置公私密钥。
 
-ssh -keygen -t rsa -C "your_email@example.com"
+ssh-keygen -t rsa -C "your_email@example.com"
 三次回车
 
 添加公开密钥
