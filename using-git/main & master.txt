@@ -1,0 +1,5 @@
+git config --global init.defaultBranch main
+
+以上方法只是让以后创建的项目默认分支为main, 但对于已经创建的项目则无能为力, 所以我们还需要对已存在的项目逐个进行修改.
+
+使用git branch -M main命令, 把当前master分支改名为main, 其中-M的意思是移动或者重命名当前分支
