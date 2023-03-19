@@ -3,7 +3,7 @@
 设置姓名和邮箱地址
 
 git config --global user.name "Firstname Lastname"
-git comnfig --global user.email "your_email@example.com"
+git config --global user.email "your_email@example.com"
 配置公私密钥。
 
 ssh-keygen -t rsa -C "your_email@example.com"
